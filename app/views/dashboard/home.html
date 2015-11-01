@@ -8,10 +8,10 @@
     <!-- /.row -->
     <div class="row">
         
-        <stats number="6" comments="New comments!" colour="primary" type="comments"></stats>
-        <stats number="12" comments="New tasks!" colour="primary" type="user"></stats>
-        <stats number="18" comments="New orders!" colour="yellow" type="shopping-cart"></stats>
-        <stats number="24" comments="Support tickets!" colour="red" type="support"></stats>
+        <stats number="6" comments="当日注册用户" colour="primary" type="comments" goto="/users"></stats>
+        <stats number="12" comments="当日访问量" colour="primary" type="user" goto="/users"></stats>
+        <stats number="18" comments="当日成交额" colour="yellow" type="shopping-cart" goto="/users"></stats>
+        <stats number="24" comments="当日充值额" colour="red" type="support" goto="/users"></stats>
 
     </div>
     
@@ -20,10 +20,11 @@
         <div class="col-lg-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
+                    <i class="fa fa-clock-o fa-fw"></i> 当日成交额曲线
                 </div>
                 <!-- /.panel-heading -->
-                <timeline></timeline>
+                <canvas id="line" class="chart chart-line chart-xl" data="line.data" labels="line.labels" legend="true"
+                click="line.onClick" series="line.series"></canvas>
                 <!-- /.panel-body -->
             </div>
             <!-- /.panel -->
@@ -32,7 +33,7 @@
         <div class="col-lg-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-bell fa-fw"></i> Notifications Panel
+                    <i class="fa fa-bell fa-fw"></i> 网站信息
                 </div>
                 <!-- /.panel-heading -->
                 <notifications></notifications> 
@@ -40,8 +41,6 @@
             </div>
             <!-- /.panel -->
 
-            <chat></chat>
-             <!-- /.panel .chat-panel -->
         </div>
         <!-- /.col-lg-4 -->
     </div>

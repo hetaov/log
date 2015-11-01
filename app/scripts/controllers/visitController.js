@@ -10,11 +10,11 @@ angular.module('sbAdminApp')
   .controller('VisitCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
 	console.log('visitCtrl');
     $scope.line = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        series: ['Series A', 'Series B'],
+        labels: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07'],
+        series: ['活期宝', '定期宝'],
         data: [
-          [65, 59, 80, 81, 56, 55, 40],
-          [28, 48, 40, 19, 86, 27, 90]
+          [651, 859, 9980, 181, 256, 550, 440],
+          [4428, 2348, 3340, 5519, 186, 287, 990]
         ],
         onClick: function (points, evt) {
           console.log(points, evt);
@@ -22,14 +22,16 @@ angular.module('sbAdminApp')
     };
 
     $scope.bar = {
-	    labels: ['2006', '2007', '2008', '2009', '2010', '2011', '2012'],
-		series: ['Series A', 'Series B'],
+        labels: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07'],
+        series: ['活期宝', '定期宝'],
 
 		data: [
-		   [65, 59, 80, 81, 56, 55, 40],
-		   [28, 48, 40, 19, 86, 27, 90]
+		   [65000, 25901, 2280, 33381, 54456, 22155, 33240],
+		   [44228, 3348, 22140, 88919, 88886, 99927, 33290]
 		]
     	
     };
+
+	//$('.date').datepicker();
 
 }]);

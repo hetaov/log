@@ -10,6 +10,22 @@
         <div class="panel panel-default">
             <div class="panel-heading">一周访问量</div>
             <div class="panel-body">
+				<form class="condition" id="conditions">
+					<div class="row">
+						<div class="col-lg-6 col-sm-6">
+							<div class="form-group">
+								<label>from</label>
+								<input class="form-control date" value="2015-01-12"/>
+							</div>
+						</div>
+						<div class="col-lg-6 col-sm-6">
+							<div class="form-group">
+								<label>to</label>
+								<input class="form-control date" value="2015-09-27"/>
+							</div>
+						</div>
+					</div>
+				</form>
                 <canvas id="line" class="chart chart-line chart-xl" data="line.data" labels="line.labels" legend="true"
                 click="line.onClick" series="line.series"></canvas>
             </div>
